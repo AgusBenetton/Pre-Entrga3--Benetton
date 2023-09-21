@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Préstamo</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center mt-4">
+            <h1>Solicitud de Préstamo</h1>
+        </header>
+        <main class="mt-4">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <form id="loanForm">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="monto">Monto solicitado:</label>
+                            <input type="number" id="monto" name="monto" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="plazo">Plazo (en meses):</label>
+                            <input type="number" id="plazo" name="plazo" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tasa">Tasa de interés:</label>
+                            <input type="number" id="tasa" name="tasa" step="0.01" class="form-control" required>
+                        </div>
+
+                        <button type="button" id="calcular" class="btn btn-primary">Calcular Cuota</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="resultado" class="mt-4"></div>
+        </main>
+    </div>
+
+    
+    <script src="Prestamos.js"></script>
+</body>
+</html>
